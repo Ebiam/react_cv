@@ -1,0 +1,16 @@
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    background-color: ghostwhite;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.menuButton {
+    marginRight: '80%',
+}
+
+.title {
+    flex-grow: 1;
+}
+

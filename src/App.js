@@ -1,10 +1,16 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Topbar from './components/Topbar/Topbar';
 
 function App() {
   return (
+      <>
+        <Topbar title={"Enzo Biamonti"}/>
     <div className="App">
+
       <header className="App-header">
+
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -19,6 +25,7 @@ function App() {
         </a>
       </header>
     </div>
+        </>
   );
 }
 
