@@ -7,6 +7,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import Chip from "@material-ui/core/Chip";
 
 const styles = theme => ({
     menuButton: {
@@ -37,7 +40,13 @@ class Topbar extends React.Component {
                             {this.props.title}
                         </Typography>
                         <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                            <MenuIcon />
+                            <div onClick={() => {window.open("https://fr.linkedin.com/in/enzo-biamonti-b3109a155", "_blank")}}>
+                                <LinkedInIcon style={{marginInline: '10px'}}/>
+                            </div>
+                            <div onClick={() => {window.open("https://github.com/Ebiam", "_blank")}} >
+                                <GitHubIcon style={{marginInline: '10px'}}/>
+                            </div>
+                            <MenuIcon style={{marginInline: '10px'}} />
                         </IconButton>
                     </Toolbar>
                 </AppBar>
