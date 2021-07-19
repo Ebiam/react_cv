@@ -3,6 +3,9 @@ import "./Carousel.css";
 import PropTypes from 'prop-types';
 import {withStyles} from "@material-ui/core";
 import Topbar from '..//Topbar/Topbar';
+import logo2 from "../../assets/logo.svg";
+import nodeLogo from "../../assets/nodejs.svg";
+import cppLogo from "../../assets/cpp.svg";
 
 const styles = theme => ({
     menuButton: {
@@ -26,17 +29,28 @@ class Carousel extends React.Component {
 
                     <section className={"CarouselElement"}>
                         <Topbar color={"secondary"}/>
-                        <div style={{scrollSnapAlign: 'start', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', }} >
+                        <img src={logo2} className="animLogo" alt="logo" />
+                        <img src={nodeLogo} className="animLogo nodeLogo" alt="logo" />
+                        <img src={cppLogo} className="animLogo cppLogo" alt="logo" />
+                        <div style={{height: '100%',scrollSnapAlign: 'start', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-arround', backgroundColor: '#355a7a'}} >
+                            <div style={{paddingBlock: '100px',}}>
                             <h1 style={{color: 'white',}}>
                                 Qui suis-je ?
                             </h1>
-                            <p>Technophile passionné de sciences, d'entreuprenariat et de marketing mais aussi de cinéma, de voyages et d'animaux.</p>
-                            <p>Mon parcours au sein de l'école Epitech m'a permis de travailler sur de nombreux projets riches et variés et l'atout de m'autoformer en permanence.</p>
-                            <p>Ces projets m'ont dans un premier temps permis de découvrir les languages C et C++ et l'environement UNIX.</p>
-                            <p>Puis la programation de serveurs de jeux et d'API, d'applications mobile mais aussi la gestion de projet en groupe.</p>
-                            <p>Etudiant en cinquième année à l'école EPITECH passioné et desireux d'apprendre, je souhaite enrichir mes compétences dans un environnement stimulant et challengant et offrant des opportunitées d'évoultion motivantes.
-                            </p>
-                            <p>En pleine démarche vers un status de freelance, je recherche aussi activement des clients pour effectuer des missions.</p>
+                            </div>
+                            <div style={{textAlign: 'center', color: "white"}}>
+                            <p>Technophile féru de sciences, d'entreprenariat et de marketing mais aussi de cinéma, de voyages et d'animaux.</p>
+                                <p>Etudiant en cinquième année à l'école EPITECH passionné et désireux d'apprendre, je souhaite enrichir mes compétences dans un environnement stimulant et challengeant et offrant des opportunités d'évolution motivantes.
+                                </p>
+                                <br/>
+                            <p>Mon parcours au sein de l'école Epitech m'a permis de travailler sur de nombreux projets riches et variés et l'atout de m'auto-former en permanence.</p>
+                                <br/>
+                            <p>Ces projets m'ont dans un premier temps permis de découvrir les languages C et C++ et l'environement UNIX.
+                            Puis la programmation de serveurs de jeux et d'API, d'applications mobile mais aussi la gestion de projet en groupe.
+
+                            En pleine démarche vers un statut de freelance, je recherche aussi activement des clients pour effectuer des missions.
+                            Mon attention se porte majoritairement sur le BACK-END et la programmation MOBILE en REACT NATIVE</p>
+                            </div>
                         </div>
                     </section>
 
