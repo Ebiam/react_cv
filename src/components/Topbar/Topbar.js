@@ -31,10 +31,11 @@ class Topbar extends React.Component {
     render(){
 
         const { classes } = this.props;
+        const color = this.props.color ? this.props.color : "primary";
 
         return (
             <>
-                <AppBar position="static">
+                <AppBar position="sticky" color={color}>
                     <Toolbar>
                         <Typography variant="h6" className="title">
                             {this.props.title}

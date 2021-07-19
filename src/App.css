@@ -1,14 +1,53 @@
-.App {
+.snapContainer {
+  scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: scroll;
+}
+.snapSection {
+  border-right: 1px solid white;
+  min-width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
   text-align: center;
+  position: relative;
+}
+.section{
+  scroll-snap-align: start;
+}
+
+.AppContainer {
+  scroll-snap-align: start;
+}
+
+.App {
+  scroll-snap-align: start;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
+  margin-block: 10vh;
+  pointer-events: none;
+}
+
+.App-logo{
+  height: 20vmin;
+  margin-block: 7vh;
+  pointer-events: none;
+}
+
+.App-logo2 {
+  height: 10vmin;
+  margin-block: 7vh;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+  .App-logo2 {
     animation: App-logo-spin infinite 20s linear;
   }
 }
