@@ -24,16 +24,17 @@ class Carousel extends React.Component {
     render(){
 
         return (
-            <div style={this.props.style}>
+            <>
+                <Topbar color={"secondary"}/>
+            <div className={'ContentContainer'}>
                 <div className={"CarouselContainer"}>
+                    <section className={"CarouselElement About"}>
 
-                    <section className={"CarouselElement"}>
-                        <Topbar color={"secondary"}/>
                         <img src={logo2} className="animLogo" alt="logo" />
                         <img src={nodeLogo} className="animLogo nodeLogo" alt="logo" />
                         <img src={cppLogo} className="animLogo cppLogo" alt="logo" />
-                        <div style={{height: '100%',scrollSnapAlign: 'start', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-arround', backgroundColor: '#355a7a'}} >
-                            <div style={{paddingBlock: '100px',}}>
+                        <div style={{scrollSnapAlign: 'start', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-arround'}} >
+                            <div style={{paddingBlock: '70px',}}>
                             <h1 style={{color: 'white',}}>
                                 Qui suis-je ?
                             </h1>
@@ -55,7 +56,6 @@ class Carousel extends React.Component {
                     </section>
 
                     <section className={"CarouselElement"}>
-                        <Topbar color={"secondary"}/>
                         <div style={{scrollSnapAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}} >
                             <h1 style={{color: 'white',}}>
                                 Mon parcours
@@ -67,7 +67,6 @@ class Carousel extends React.Component {
                     </section>
 
                     <section className={"CarouselElement"}>
-                        <Topbar color={"secondary"}/>
                         <div style={{scrollSnapAlign: 'center', display: 'flex',flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}} >
                             <h1 style={{color: 'white',}}>
                                 Qui suis-je ?
@@ -79,6 +78,7 @@ class Carousel extends React.Component {
                     </section>
                 </div>
             </div>
+            </>
         );
     }
 }

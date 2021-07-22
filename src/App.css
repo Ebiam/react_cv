@@ -1,18 +1,9 @@
-.snapContainer {
-  scroll-snap-type: y mandatory;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  overflow: scroll;
+.scroll-snap-y {
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
 }
-.snapSection {
-  border-right: 1px solid white;
-  min-width: 100vw;
-  height: 100vh;
-  scroll-snap-align: start;
-  text-align: center;
-  position: relative;
-}
+
 .section{
   scroll-snap-align: start;
   border-right: 1px solid white;
@@ -21,15 +12,6 @@
   width: 100%;
   position: relative;
 }
-
-.AppContainer {
-  scroll-snap-align: start;
-}
-
-.App {
-  scroll-snap-align: start;
-}
-
 
 .App-logo2 {
   height: 10vmin;
@@ -46,17 +28,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -68,53 +39,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-
-.arrows {
-  width: 60px;
-  height: 72px;
-  position: absolute;
-  left: 50%;
-  margin-left: -30px;
-  bottom: 20px;
-}
-
-.arrows path {
-  stroke: #2994D1;
-  fill: transparent;
-  stroke-width: 1px;
-  animation: arrow 2s infinite;
-  -webkit-animation: arrow 2s infinite;
-}
-
-@keyframes arrow
-{
-  0% {opacity:0}
-  40% {opacity:1}
-  80% {opacity:0}
-  100% {opacity:0}
-}
-
-@-webkit-keyframes arrow /*Safari and Chrome*/
-{
-  0% {opacity:0}
-  40% {opacity:1}
-  80% {opacity:0}
-  100% {opacity:0}
-}
-
-.arrows path.a1 {
-  animation-delay:-1s;
-  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
-}
-
-.arrows path.a2 {
-  animation-delay:-0.5s;
-  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
-}
-
-.arrows path.a3 {
-  animation-delay:0s;
-  -webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
