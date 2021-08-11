@@ -13,6 +13,7 @@
     scroll-snap-align: start;
     text-align: center;
     position: relative;
+
 }
 
 .ContentContainer {
@@ -27,7 +28,7 @@
 }
 
 .About {
-    background-color: #282c34;
+    background-color: #00000000;
 }
 
 .App-logo {

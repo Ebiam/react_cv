@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect, useRef,} from "react";
 import "./Topbar.css";
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { MenuItem, Drawer,} from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -17,47 +17,107 @@ const styles = theme => ({
     },
 });
 
-class Topbar extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            hide: false,
+export default function Topbar(props) {
+
+    const headersData = [
+        {
+            label: "Home",
+            href: "#home",
+        },
+        {
+            label: "Mon Expérience",
+            href: "#exp",
+        },
+        {
+            label: "A propos",
+            href: "#aboutme",
+        },
+    ];
+
+
+    const [state, setState] = useState({
+        mobileView: false,
+        hide: false,
+        drawerOpen: false
+    });
+
+    const _togle_hide = () => {
+        setState( {hide: !state.hide});
+    };
+
+    const { mobileView, drawerOpen} = state;
+
+    useEffect(() => {
+        const setResponsiveness = () => {
+            return window.innerWidth < 900
+                ? setState((prevState) => ({ ...prevState, mobileView: true }))
+                : setState((prevState) => ({ ...prevState, mobileView: false }));
+        };
+
+        setResponsiveness();
+        window.addEventListener("resize", () => setResponsiveness());
+
+        return () => {
+            window.removeEventListener("resize", () => setResponsiveness());
         }
-    }
+    }, []);
 
-    _togle_hide(){
-        this.setState( {hide: !this.state.hide});
-    }
-    render(){
+    const handleDrawerOpen = () =>
+        setState((prevState) => ({ ...prevState, drawerOpen: true }));
+    const handleDrawerClose = () =>
+        setState((prevState) => ({ ...prevState, drawerOpen: false }));
 
-        const { classes } = this.props;
-        const color = this.props.color ? this.props.color : "primary";
+
+
+
+    const { classes } = props;
+    const color = props.color ? props.color : "primary";
+
+    const getDrawerChoices = () => {
+        return headersData.map(({ label, href }) => {
+            return (
+                <a key={label} href={href} onClick={handleDrawerClose
+                }>
+                    <MenuItem>{label}</MenuItem>
+                </a>
+            );
+        });
+    };
 
         return (
             <>
                 <AppBar position="sticky" color={color}>
                     <Toolbar>
                         <Typography variant="h6" className="title">
-                            {this.props.title}
+                            {props.title}
                         </Typography>
-                        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                            <div onClick={() => {window.open("https://fr.linkedin.com/in/enzo-biamonti-b3109a155", "_blank")}}>
-                                <LinkedInIcon style={{marginInline: '10px'}}/>
-                            </div>
-                            <div onClick={() => {window.open("https://github.com/Ebiam", "_blank")}} >
-                                <GitHubIcon style={{marginInline: '10px'}}/>
-                            </div>
-                            <MenuIcon style={{marginInline: '10px'}} />
+                        <div style={{cursor: 'pointer'}} onClick={() => {window.open("https://fr.linkedin.com/in/enzo-biamonti-b3109a155", "_blank")}}>
+                            <LinkedInIcon style={{marginInline: '10px'}}/>
+                        </div>
+                        <div style={{cursor: 'pointer'}} onClick={() => {window.open("https://github.com/Ebiam", "_blank")}} >
+                            <GitHubIcon style={{marginInline: '10px'}}/>
+                        </div>
+                        <IconButton edge="start" color="inherit" aria-label="menu">
+
+                            <Drawer
+                                {...{
+                                    anchor: "left",
+                                    open: drawerOpen,
+                                    onClose: handleDrawerClose,
+                                }}
+                            >
+                                <div >{getDrawerChoices()}</div>
+                            </Drawer>
+                            <MenuIcon style={{marginInline: '10px'}} onClick={handleDrawerOpen} />
                         </IconButton>
                     </Toolbar>
                 </AppBar>
             </>
         );
-    }
 }
 
 Topbar.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Topbar);
+//export default withStyles(styles)(Topbar);

@@ -1,0 +1,32 @@
+.aboutme-card-item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutme-card-items {
+    background-color: #3f51b535;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.aboutme-card-item-logo {
+    width: 24px;
+    height: auto;
+}
+
+.aboutme-card-item-title-container {
+    padding-inline: 5px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutme-card-item-title {
+    color: black;
+}
+
+.aboutme-card-item-button {
+    padding-right: 15px;
+}
