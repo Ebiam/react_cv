@@ -19,6 +19,7 @@ function App() {
 
   return (
       <CartContext>
+          <Topbar title={"Enzo Biamonti"}/>
         <div className={'scroll-snap-y'}>
 
             <section  className={"section s1"} id={'home'}>
@@ -27,7 +28,7 @@ function App() {
             </section>
 
             <section className={"section s2 end"} id={'exp'} style={{backgroundColor: '#282c34'}}>
-                <Topbar title={"Mon expérience"}/>
+
               <Carousel>
 
                   <AboutMe id={'aboutMe'}/>

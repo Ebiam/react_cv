@@ -47,7 +47,6 @@ function Home() {
 
     return (
         <>
-            <Topbar title={"Enzo Biamonti"}/>
             <div className="App-header">
                 <div style={{ textAlign: 'center', paddingTop: '20vh'}}>
                     <h1>Enzo Biamonti</h1>
