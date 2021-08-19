@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d804772-445e-4ad9-b1f2-c25915362430" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/MyCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/MyCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Carousel/Carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel/Carousel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/carousel/AboutMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/carousel/AboutMe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/sections/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/sections/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/sections/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/sections/Home.js" afterDir="false" />
-    </list>
+    <list default="true" id="2d804772-445e-4ad9-b1f2-c25915362430" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -331,12 +322,12 @@
       <workItem from="1626647758096" duration="17422000" />
       <workItem from="1627424807725" duration="5738000" />
       <workItem from="1628265590420" duration="44898000" />
-      <workItem from="1629353571247" duration="1096000" />
+      <workItem from="1629353571247" duration="2137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85232000" />
+    <option name="totallyTimeSpent" value="86273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
