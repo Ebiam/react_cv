@@ -7,12 +7,12 @@ function MyCard (props) {
 
     return(
         <div className={'myCard-container'} style={props.style}>
-            <div className={'myCard-title-container'}>
+            <div className={'myCard-title-container'} >
                 <p style={props.titleStyle}>
                     <strong>{props.title}</strong>
                 </p>
             </div>
-            <div >
+            <div style={props.ContentStyle} >
                 {props.children}
             </div>
         </div>

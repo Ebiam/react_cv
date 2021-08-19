@@ -21,11 +21,12 @@ function App() {
       <CartContext>
         <div className={'scroll-snap-y'}>
 
-            <section className={"section s1"} id={'home'}>
+            <section  className={"section s1"} id={'home'}>
+                <meta name={'description'} content={"My CV as a developer"} />
                 <Home/>
             </section>
 
-            <section className={"section s2 end"} id={'exp'}>
+            <section className={"section s2 end"} id={'exp'} style={{backgroundColor: '#282c34'}}>
                 <Topbar title={"Mon expérience"}/>
               <Carousel>
 
@@ -84,9 +85,9 @@ function App() {
                           <h1 style={{color: 'white',}}>
                               Mon parcours
                           </h1>
-                          <img src={logo2} className="animLogo" alt="logo"/>
+                          {/*<img src={logo2} className="animLogo" alt="logo"/>
                           <img src={nodeLogo} className="animLogo nodeLogo" alt="logo"/>
-                          <img src={cppLogo} className="animLogo cppLogo" alt="logo"/>
+                          <img src={cppLogo} className="animLogo cppLogo" alt="logo"/>*/}
 
                           <p>Mon parcours au sein de l'école Epitech m'a permis de travailler sur de nombreux projets
                               riches et variés </p>

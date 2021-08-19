@@ -125,19 +125,20 @@ function AboutMe(props) {
                 justifyContent: "space-evenly",
                 flexWrap: "wrap",
                 paddingInline: "10px",
-                marginBottom: '30%'
+                maxHeight: '93vh',
+                width: '100%',
             }} id={props.id}>
                 {/*<Form/>*/}
-                <MyCard title={'Languages'} style={{maxWidth: '47%'}}>
+                <MyCard title={'Languages'} style={{height: '45%', maxWidth: '47%'}} ContentStyle={{height: '38vh', overflow: 'scroll'}}>
                     {_cardLittleItems(Languages)}
                 </MyCard>
-                <MyCard title={'Technologies'} style={{maxWidth: '47%'}}>
+                <MyCard title={'Technologies'} style={{maxWidth: '47%'}} ContentStyle={{height: '38vh', overflow: 'scroll'}}>
                     {_cardLittleItems(Tech)}
                 </MyCard>
-                <MyCard title={'Expériences'}>
+                <MyCard title={'Expériences'}  style={{height: '100%'}} ContentStyle={{height: '38vh', overflow: 'scroll'}}>
                     {exp.map(card =>
-                        <div>
-                            <div className={'aboutme-card-item-container aboutme-card-items'}>
+                        <div >
+                            <div style={{maxHeight: '50%', overflow: 'scroll'}} className={'aboutme-card-item-container aboutme-card-items'}>
                                 <img src={card.image} alt="Logo" style={{width: '24px', height: 'auto'}}/>
                                 <p style={{paddingLeft: "5px", width: '100%', color: 'black'}}>
                                     <strong>{card.title}</strong></p>
@@ -158,9 +159,9 @@ function AboutMe(props) {
 
             {/*<div style={{backgroundColor: 'red'}}>
                 {cart.map((item) => <p style={{color: "white"}}>{item}</p>)}
-            </div>*/}
+            </div>
 
-            <div style={{marginBlock: '10vh'}}><p style={{color: "white"}}> Mon parcours -></p></div>
+            <div style={{marginBlock: '10vh'}}><p style={{color: "white"}}> Mon parcours -></p></div>*/}
         </>
     )
 }

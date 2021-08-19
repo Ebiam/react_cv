@@ -49,7 +49,7 @@ function Home() {
         <>
             <Topbar title={"Enzo Biamonti"}/>
             <div className="App-header">
-                <div style={{ textAlign: 'center'}}>
+                <div style={{ textAlign: 'center', paddingTop: '20vh'}}>
                     <h1>Enzo Biamonti</h1>
                     <h5>Développeur</h5>
                     <div style={{marginBlock: '10vh'}}>
