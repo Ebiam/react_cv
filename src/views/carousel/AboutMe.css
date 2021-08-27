@@ -28,5 +28,17 @@
 }
 
 .aboutme-card-item-button {
-    padding-right: 15px;
+    padding-inline: 10px;
+    background-color: darkgreen;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.aboutme-card-item-button-minus {
+    padding-inline: 10px;
+    background-color: red;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
 }

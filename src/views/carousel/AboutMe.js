@@ -93,6 +93,8 @@ const exp = [
 function AboutMe(props) {
 
     const add_to_cart = useContext(CartContext).add_to_cart;
+    const is_item_added = useContext(CartContext).is_item_added;
+    const remove_from_cart = useContext(CartContext).remove_from_cart;
     const cart = useContext(CartContext).cart;
 
     const _add_to_cart = (item) => {
@@ -104,14 +106,19 @@ function AboutMe(props) {
             items.map((card, index) =>
                 <div
                     className={'aboutme-card-item-container aboutme-card-items'}
-                    onClick={() => {
-                        _add_to_cart(card.title);
-                    }}>
+                    >
                     <img src={card.image} alt="Logo" className={'aboutme-card-item-logo'}/>
                     <div className={'aboutme-card-item-title-container'}>
                         <p className={'aboutme-card-item-title'}>{card.title}</p>
                     </div>
-                    <p className={'aboutme-card-item-button'}>+</p>
+                    {
+                        is_item_added(card.title) ?
+                            <p className={'aboutme-card-item-button-minus'} onClick={() => remove_from_cart(card.title)}>-</p> :
+                            <p className={'aboutme-card-item-button'} onClick={() => {
+                                _add_to_cart(card.title);
+                            }}>+</p>
+                    }
+
                 </div>
             )
         );
