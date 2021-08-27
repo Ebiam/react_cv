@@ -27,6 +27,8 @@ export default function MyForm(props) {
             });
     };
 
+    const cartValue = cart.length > 0 ? '[' + cart.toString() + ']': "Sélectionnez...";
+
     return (
         <div className={"myForm-container myForm-email"} >
             <div className={"myForm-title-container"}>
@@ -39,7 +41,7 @@ export default function MyForm(props) {
                 <input name='from_email' type="text" placeholder="Email…" className="form__input" />
                 <p>Technologies :</p>
                 <input name='tech' type="text" placeholder="" className="form__input" disabled={true}
-                       value={cart.length > 0 ? '[' + cart.toString() + ']': "Sélectionnez..."}/>
+                       value={cartValue}/>
                 <p>Votre message:</p>
                 <textarea name='message' type="text" placeholder="Votre message…" className="form__input-message">
                     {"Bonjour Enzo,\n"}
