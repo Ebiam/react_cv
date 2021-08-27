@@ -113,7 +113,7 @@ function AboutMe(props) {
                     </div>
                     {
                         is_item_added(card.title) ?
-                            <p className={'aboutme-card-item-button-minus'} onClick={() => remove_from_cart(card.title)}>-</p> :
+                            <p className={'aboutme-card-item-button aboutme-card-item-button-minus'} onClick={() => remove_from_cart(card.title)}>-</p> :
                             <p className={'aboutme-card-item-button'} onClick={() => {
                                 _add_to_cart(card.title);
                             }}>+</p>
@@ -135,7 +135,7 @@ function AboutMe(props) {
                 maxHeight: '93vh',
                 width: '100%',
             }} id={props.id}>
-                <Form/>
+
                 <MyCard title={'Languages'} style={{height: '45%', maxWidth: '47%'}} ContentStyle={{height: '38vh', overflow: 'scroll'}}>
                     {_cardLittleItems(Languages)}
                 </MyCard>

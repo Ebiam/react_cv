@@ -16,9 +16,8 @@
   overflow: scroll;
 }
 
-.section.end{
+.end{
   scroll-snap-align: end;
-  scroll-snap-stop: normal;
 }
 
 .App-logo2 {

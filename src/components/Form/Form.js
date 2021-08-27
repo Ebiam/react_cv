@@ -34,20 +34,32 @@ export default function MyForm(props) {
             <div className={"myForm-title-container"}>
                 <h3 className={"myForm-title"}>Contactez moi !</h3>
             </div>
-            <Form className={"myForm-form"} onSubmit={onSubmit}>
-                <p>Votre nom:</p>
-                <input name='from_name' type="text" placeholder="Votre Nom…" className="form__input" />
-                <p>Votre meilleure adresse e-mail:</p>
-                <input name='from_email' type="text" placeholder="Email…" className="form__input" />
-                <p>Technologies :</p>
-                <input name='tech' type="text" placeholder="" className="form__input" /*disabled={true}*/
-                       value={cartValue}/>
-                <p>Votre message:</p>
-                <textarea name='message' type="text" placeholder="Votre message…" className="form__input-message">
+            <Form className={"myForm-formContainer"} onSubmit={onSubmit}>
+                <div className={"myForm-inputContainer"} >
+                    <p className={"form__input-label"}>Votre nom</p>
+                    <input name='from_name' type="text" placeholder="Votre Nom…" className="form__input" />
+                </div>
+
+                <div className={"myForm-inputContainer"}>
+                    <p className={"form__input-label"}>Votre meilleure adresse e-mail</p>
+                    <input name='from_email' type="text" placeholder="Email…" className="form__input" />
+                </div>
+
+                <div className={"myForm-inputContainer"}>
+                    <p className={"form__input-label"}>Technologies</p>
+                    <input name='tech' type="text" placeholder="" className="form__input" /*disabled={true}*/
+                           value={cartValue}/>
+                </div>
+
+                <div className={"myForm-inputContainer"}>
+                    <p className={"form__input-label"}>Votre message:</p>
+                    <textarea name='message' type="text" placeholder="Votre message…" className="form__input-message">
                     {"Bonjour Enzo,\n"}
-                </textarea>
+                    </textarea>
+                </div>
+
                 <div className={'myForm-footer'}>
-                    <button className="form__input—button">Send Message</button>
+                    <button className={"form__input—button"}>Envoyer</button>
                 </div>
             </Form>
         </div>

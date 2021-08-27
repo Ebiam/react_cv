@@ -9,6 +9,7 @@ import './components/Donut.css'
 import Topbar from "./components/Topbar/Topbar";
 import AboutMe from "./views/carousel/AboutMe";
 import CartContext from './contexts/CartContext';
+import Form from "./components/Form/Form";
 
 require('dotenv').config();
 
@@ -105,11 +106,14 @@ function App() {
                   </div>
               </Carousel>
             </section>
-
-
-
-            <section>
-
+            <section className={"section s2 end"}>
+                <div style={{  display: 'flex',
+                    'align-items': 'center',
+                    'justify-content': 'center',
+                    height: '100%'
+                }}>
+                    <Form/>
+                </div>
             </section>
         </div>
       </CartContext>

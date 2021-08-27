@@ -14,20 +14,26 @@
 .aboutme-card-item-logo {
     width: 24px;
     height: auto;
+    flex-grow: 0;
 }
 
 .aboutme-card-item-title-container {
     padding-inline: 5px;
-    width: 100%;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    flex-grow: 2;
 }
 
 .aboutme-card-item-title {
     color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .aboutme-card-item-button {
+    cursor: pointer;
+    flex-grow: 0;
     padding-inline: 10px;
     background-color: darkgreen;
     border-radius: 20px;
@@ -36,9 +42,5 @@
 }
 
 .aboutme-card-item-button-minus {
-    padding-inline: 10px;
     background-color: red;
-    border-radius: 20px;
-    align-items: center;
-    text-align: center;
 }
