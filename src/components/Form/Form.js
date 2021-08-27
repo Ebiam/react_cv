@@ -40,7 +40,7 @@ export default function MyForm(props) {
                 <p>Votre meilleure adresse e-mail:</p>
                 <input name='from_email' type="text" placeholder="Email…" className="form__input" />
                 <p>Technologies :</p>
-                <input name='tech' type="text" placeholder="" className="form__input" disabled={true}
+                <input name='tech' type="text" placeholder="" className="form__input" /*disabled={true}*/
                        value={cartValue}/>
                 <p>Votre message:</p>
                 <textarea name='message' type="text" placeholder="Votre message…" className="form__input-message">
