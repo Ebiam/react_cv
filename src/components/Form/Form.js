@@ -16,14 +16,15 @@ export default function MyForm(props) {
     const cart = useContext(CartContext).cart;
 
     const onSubmit = (e) => {
-        /*e.preventDefault();// Prevents default refresh by the browser
+
+        e.preventDefault();// Prevents default refresh by the browser
         emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, e.target,  process.env.REACT_APP_EMAILJS_USER_ID)
         .then(result => {
                 alert('Votre message a bien été envoyé ! Je vous répondrais le plus rapidement possible ! :)', result.text);
             },
             error => {
                 alert('Une erreur est survenue, merci de m\'envoyer directement un mail.' ,error.text)
-            })*/
+            });
     };
 
     return (

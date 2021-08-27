@@ -128,7 +128,7 @@ function AboutMe(props) {
                 maxHeight: '93vh',
                 width: '100%',
             }} id={props.id}>
-                {/*<Form/>*/}
+                <Form/>
                 <MyCard title={'Languages'} style={{height: '45%', maxWidth: '47%'}} ContentStyle={{height: '38vh', overflow: 'scroll'}}>
                     {_cardLittleItems(Languages)}
                 </MyCard>
