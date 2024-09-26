@@ -10,22 +10,34 @@ import Topbar from "./components/Topbar/Topbar";
 import AboutMe from "./views/carousel/AboutMe";
 import CartContext from './contexts/CartContext';
 import Form from "./components/Form/Form";
+import { useTranslation } from 'react-i18next';
+import './i18n';
 
 require('dotenv').config();
 
 function App() {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   React.useEffect(() => {
   }, []);
 
   return (
       <CartContext>
-          <Topbar title={"Enzo Biamonti"}/>
+          <Topbar title={t('app.title')}/>
         <div className={'scroll-snap-y'}>
 
             <section  className={"section s1"} id={'home'}>
-                <meta name={'description'} content={"My CV as a developer"} />
+                <meta name={'description'} content={t('app.description')} />
                 <Home/>
+                <div>
+                  <button onClick={() => changeLanguage('en')}>English</button>
+                  <button onClick={() => changeLanguage('fr')}>Français</button>
+                  <button onClick={() => changeLanguage('zh')}>中文</button>
+                </div>
             </section>
 
             <section className={"section s2 end"} id={'exp'} style={{backgroundColor: '#282c34'}}>
@@ -46,16 +58,12 @@ function App() {
                       }}>
                           <div style={{paddingBlock: '70px',}}>
                               <h1 style={{color: 'white',}}>
-                                  Qui suis-je ?
+                                  {t('aboutMe.whoAmI')}
                               </h1>
                           </div>
                           <div style={{textAlign: 'center', color: "white", display:'flex', width: '100vw'}}>
                               <p  >
-                                  Technophile féru de sciences, d'entreprenariat et de marketing mais aussi de cinéma, de
-                                  voyages et d'animaux.
-                                  Etudiant en cinquième année à l'école EPITECH, passionné et désireux d'apprendre, je
-                                  souhaite enrichir mes compétences dans un environnement stimulant et challengeant et
-                                  offrant des opportunités d'évolution motivantes.
+                                  {t('aboutMe.description')}
                               </p>
                               <div style={{width: "60%", borderRadius: '15px'}}>
                                           <div className="donut-chart">
@@ -85,23 +93,9 @@ function App() {
                           justifyContent: 'center'
                       }}>
                           <h1 style={{color: 'white',}}>
-                              Mon parcours
+                              {t('aboutMe.myJourney')}
                           </h1>
-                          {/*<img src={logo2} className="animLogo" alt="logo"/>
-                          <img src={nodeLogo} className="animLogo nodeLogo" alt="logo"/>
-                          <img src={cppLogo} className="animLogo cppLogo" alt="logo"/>*/}
-
-                          <p>Mon parcours au sein de l'école Epitech m'a permis de travailler sur de nombreux projets
-                              riches et variés </p>
-                          <p>Ces projets m'ont dans un premier temps permis de découvrir les languages C et C++ et
-                              l'environement UNIX et l'habitude de m'auto-former et chercher l'information en autonomie.
-                              Puis la programmation de serveurs de jeux et d'API, d'applications mobile mais aussi la
-                              gestion de projet en groupe.
-
-                              En pleine démarche vers un statut de freelance, je recherche aussi activement des
-                              clients pour effectuer des missions.
-                              Mon attention se porte majoritairement sur le BACK-END et la programmation MOBILE en
-                              REACT NATIVE</p>
+                          <p>{t('aboutMe.myJourneyDescription')}</p>
                       </div>
                   </div>
               </Carousel>
