@@ -1,0 +1,51 @@
+{
+  "app": {
+    "title": "Enzo Biamonti",
+    "description": "My CV as a developer",
+    "sections": {
+      "home": "Home",
+      "experience": "Experience",
+      "aboutMe": "About Me",
+      "contact": "Contact"
+    }
+  },
+  "home": {
+    "title": "Enzo Biamonti",
+    "subtitle": "Developer",
+    "status": "Looking for an internship",
+    "email": "enzo.biamonti@epitech.eu",
+    "linkedin": "My LinkedIn",
+    "github": "My Github",
+    "workInProgress": "Work in progress"
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "description": "Technophile passionate about science, entrepreneurship, and marketing, as well as cinema, travel, and animals. Fifth-year student at EPITECH, passionate and eager to learn, I want to enrich my skills in a stimulating and challenging environment that offers motivating opportunities for growth.",
+    "whoAmI": "Who am I?",
+    "myJourney": "My journey",
+    "myJourneyDescription": "My journey at EPITECH has allowed me to work on numerous rich and varied projects. These projects have initially allowed me to discover the C and C++ languages and the UNIX environment, and to develop the habit of self-learning and seeking information independently. Then, programming game servers and APIs, mobile applications, as well as project management in groups. In the process of becoming a freelancer, I am also actively looking for clients to carry out missions. My focus is mainly on BACK-END and MOBILE programming in REACT NATIVE."
+  },
+  "experience": {
+    "title": "Experience",
+    "fullStackDeveloper": "Full-Stack Developer at Timenjoy",
+    "fullStackDeveloperDescription": "This 4-month internship allowed me to understand and intervene in production on the company's numerous technologies.",
+    "reactNativeDeveloper": "React Native Developer at Relax Max",
+    "reactNativeDeveloperDescription": "Creation of a complete React Native application with Redux.",
+    "fullStackDeveloperCSharp": "Full-Stack Developer C#",
+    "fullStackDeveloperCSharpDescription": "Creation of a construction site management dashboard website in ASP.NET MVC with database, account management, and Azure services.",
+    "cCppProjects": "C / C++ Projects",
+    "cCppProjectsDescription": "Numerous projects at EPITECH aimed at discovering and manipulating the UNIX environment, Shell, Network management, Multi-threading, and Algorithms.",
+    "pythonProjects": "Python Projects",
+    "pythonProjectsDescription": "School projects: Scripts, Jupyter Notebook. Notions of Scikit-learn, Pandas, and Machine learning."
+  },
+  "contact": {
+    "title": "Contact Me",
+    "name": "Your name",
+    "email": "Your best email address",
+    "technologies": "Technologies",
+    "message": "Your message",
+    "send": "Send",
+    "successMessage": "Your message has been sent successfully! I will respond as soon as possible! :)",
+    "errorMessage": "An error occurred, please send me an email directly."
+  }
+}

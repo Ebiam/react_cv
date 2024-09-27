@@ -10,6 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Chip from "@material-ui/core/Chip";
+import { useTranslation } from 'react-i18next';
 
 const styles = theme => ({
     menuButton: {
@@ -18,22 +19,26 @@ const styles = theme => ({
 });
 
 export default function Topbar(props) {
+    const { t, i18n } = useTranslation();
 
     const headersData = [
         {
-            label: "Home",
+            label: t('app.sections.home'),
             href: "#home",
         },
         {
-            label: "Mon Expérience",
+            label: t('app.sections.experience'),
             href: "#exp",
         },
         {
-            label: "A propos",
+            label: t('app.sections.aboutMe'),
             href: "#aboutme",
         },
     ];
 
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
 
     const [state, setState] = useState({
         mobileView: false,
@@ -67,9 +72,6 @@ export default function Topbar(props) {
     const handleDrawerClose = () =>
         setState((prevState) => ({ ...prevState, drawerOpen: false }));
 
-
-
-
     const { classes } = props;
     const color = props.color ? props.color : "primary";
 
@@ -84,40 +86,42 @@ export default function Topbar(props) {
         });
     };
 
-        return (
-            <>
-                <AppBar position="sticky" color={color}>
-                    <Toolbar>
-                        <Typography variant="h6" className="title">
-                            {props.title}
-                        </Typography>
-                        <div style={{cursor: 'pointer'}} onClick={() => {window.open("https://fr.linkedin.com/in/enzo-biamonti-b3109a155", "_blank")}}>
-                            <LinkedInIcon style={{marginInline: '10px'}}/>
-                        </div>
-                        <div style={{cursor: 'pointer'}} onClick={() => {window.open("https://github.com/Ebiam", "_blank")}} >
-                            <GitHubIcon style={{marginInline: '10px'}}/>
-                        </div>
-                        <IconButton edge="start" color="inherit" aria-label="menu">
-
-                            <Drawer
-                                {...{
-                                    anchor: "left",
-                                    open: drawerOpen,
-                                    onClose: handleDrawerClose,
-                                }}
-                            >
-                                <div >{getDrawerChoices()}</div>
-                            </Drawer>
-                            <MenuIcon style={{marginInline: '10px'}} onClick={handleDrawerOpen} />
-                        </IconButton>
-                    </Toolbar>
-                </AppBar>
-            </>
-        );
+    return (
+        <>
+            <AppBar position="sticky" color={color}>
+                <Toolbar>
+                    <Typography variant="h6" className="title">
+                        {props.title}
+                    </Typography>
+                    <div style={{cursor: 'pointer'}} onClick={() => {window.open("https://fr.linkedin.com/in/enzo-biamonti-b3109a155", "_blank")}}>
+                        <LinkedInIcon style={{marginInline: '10px'}}/>
+                    </div>
+                    <div style={{cursor: 'pointer'}} onClick={() => {window.open("https://github.com/Ebiam", "_blank")}} >
+                        <GitHubIcon style={{marginInline: '10px'}}/>
+                    </div>
+                    <div>
+                        <button onClick={() => changeLanguage('en')}>English</button>
+                        <button onClick={() => changeLanguage('fr')}>Français</button>
+                        <button onClick={() => changeLanguage('zh')}>中文</button>
+                    </div>
+                    <IconButton edge="start" color="inherit" aria-label="menu">
+                        <Drawer
+                            {...{
+                                anchor: "left",
+                                open: drawerOpen,
+                                onClose: handleDrawerClose,
+                            }}
+                        >
+                            <div >{getDrawerChoices()}</div>
+                        </Drawer>
+                        <MenuIcon style={{marginInline: '10px'}} onClick={handleDrawerOpen} />
+                    </IconButton>
+                </Toolbar>
+            </AppBar>
+        </>
+    );
 }
 
 Topbar.propTypes = {
     classes: PropTypes.object.isRequired,
 };
-
-//export default withStyles(styles)(Topbar);

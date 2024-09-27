@@ -1,0 +1,51 @@
+{
+  "app": {
+    "title": "Enzo Biamonti",
+    "description": "Mon CV en tant que développeur",
+    "sections": {
+      "home": "Accueil",
+      "experience": "Expérience",
+      "aboutMe": "À propos de moi",
+      "contact": "Contact"
+    }
+  },
+  "home": {
+    "title": "Enzo Biamonti",
+    "subtitle": "Développeur",
+    "status": "À la recherche d'un stage",
+    "email": "enzo.biamonti@epitech.eu",
+    "linkedin": "Mon LinkedIn",
+    "github": "Mon Github",
+    "workInProgress": "Travail en cours"
+  },
+  "aboutMe": {
+    "title": "À propos de moi",
+    "description": "Technophile passionné par les sciences, l'entrepreneuriat et le marketing, ainsi que par le cinéma, les voyages et les animaux. Étudiant en cinquième année à l'EPITECH, passionné et désireux d'apprendre, je souhaite enrichir mes compétences dans un environnement stimulant et challengeant offrant des opportunités d'évolution motivantes.",
+    "whoAmI": "Qui suis-je ?",
+    "myJourney": "Mon parcours",
+    "myJourneyDescription": "Mon parcours à l'EPITECH m'a permis de travailler sur de nombreux projets riches et variés. Ces projets m'ont permis de découvrir les langages C et C++ et l'environnement UNIX, et de développer l'habitude de m'auto-former et de chercher l'information de manière autonome. Ensuite, la programmation de serveurs de jeux et d'API, d'applications mobiles, ainsi que la gestion de projets en groupe. En pleine démarche pour devenir freelance, je recherche également activement des clients pour réaliser des missions. Mon attention se porte principalement sur le BACK-END et la programmation MOBILE en REACT NATIVE."
+  },
+  "experience": {
+    "title": "Expérience",
+    "fullStackDeveloper": "Développeur Full-Stack chez Timenjoy",
+    "fullStackDeveloperDescription": "Ce stage de 4 mois m'a permis de comprendre et d'intervenir en production sur les nombreuses technologies de l'entreprise.",
+    "reactNativeDeveloper": "Développeur React Native chez Relax Max",
+    "reactNativeDeveloperDescription": "Création d'une application complète en React Native avec Redux.",
+    "fullStackDeveloperCSharp": "Développeur Full-Stack C#",
+    "fullStackDeveloperCSharpDescription": "Création d'un site de gestion de chantiers de type tableau de bord en ASP.NET MVC avec base de données, gestion de comptes et services Azure.",
+    "cCppProjects": "Projets C / C++",
+    "cCppProjectsDescription": "Nombreux projets à l'EPITECH visant à découvrir et manipuler l'environnement UNIX, le Shell, la gestion des réseaux, le multi-threading et l'algorithmique.",
+    "pythonProjects": "Projets Python",
+    "pythonProjectsDescription": "Projets scolaires : Scripts, Jupyter Notebook. Notions de Scikit-learn, Pandas et Machine learning."
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "name": "Votre nom",
+    "email": "Votre meilleure adresse e-mail",
+    "technologies": "Technologies",
+    "message": "Votre message",
+    "send": "Envoyer",
+    "successMessage": "Votre message a été envoyé avec succès ! Je vous répondrai dès que possible ! :)",
+    "errorMessage": "Une erreur est survenue, merci de m'envoyer un e-mail directement."
+  }
+}

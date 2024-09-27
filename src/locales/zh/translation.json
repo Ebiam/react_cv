@@ -1,0 +1,51 @@
+{
+  "app": {
+    "title": "恩佐·比亚蒙蒂",
+    "description": "我的开发者简历",
+    "sections": {
+      "home": "首页",
+      "experience": "经验",
+      "aboutMe": "关于我",
+      "contact": "联系"
+    }
+  },
+  "home": {
+    "title": "恩佐·比亚蒙蒂",
+    "subtitle": "开发者",
+    "status": "寻找实习",
+    "email": "enzo.biamonti@epitech.eu",
+    "linkedin": "我的领英",
+    "github": "我的Github",
+    "workInProgress": "进行中"
+  },
+  "aboutMe": {
+    "title": "关于我",
+    "description": "科技爱好者，热衷于科学、创业和市场营销，同时也喜欢电影、旅行和动物。EPITECH五年级学生，充满激情，渴望学习，我希望在一个充满挑战和激励的环境中丰富我的技能，并提供激励的成长机会。",
+    "whoAmI": "我是谁？",
+    "myJourney": "我的旅程",
+    "myJourneyDescription": "我在EPITECH的旅程让我有机会参与了许多丰富多样的项目。这些项目最初让我发现了C和C++语言以及UNIX环境，并养成了自学和独立寻找信息的习惯。然后是编写游戏服务器和API、移动应用程序以及团队项目管理。在成为自由职业者的过程中，我也在积极寻找客户来执行任务。我的重点主要是后端和移动编程，使用React Native。"
+  },
+  "experience": {
+    "title": "经验",
+    "fullStackDeveloper": "Timenjoy的全栈开发者",
+    "fullStackDeveloperDescription": "这四个月的实习让我了解并参与了公司众多技术的生产。",
+    "reactNativeDeveloper": "Relax Max的React Native开发者",
+    "reactNativeDeveloperDescription": "创建一个完整的React Native应用程序，使用Redux。",
+    "fullStackDeveloperCSharp": "C#全栈开发者",
+    "fullStackDeveloperCSharpDescription": "使用ASP.NET MVC创建一个施工管理仪表板网站，包含数据库、账户管理和Azure服务。",
+    "cCppProjects": "C / C++项目",
+    "cCppProjectsDescription": "EPITECH的众多项目旨在发现和操作UNIX环境、Shell、网络管理、多线程和算法。",
+    "pythonProjects": "Python项目",
+    "pythonProjectsDescription": "学校项目：脚本、Jupyter Notebook。了解Scikit-learn、Pandas和机器学习的概念。"
+  },
+  "contact": {
+    "title": "联系我",
+    "name": "你的名字",
+    "email": "你最好的电子邮件地址",
+    "technologies": "技术",
+    "message": "你的信息",
+    "send": "发送",
+    "successMessage": "您的信息已成功发送！我会尽快回复您！ :)",
+    "errorMessage": "发生错误，请直接给我发送电子邮件。"
+  }
+}
