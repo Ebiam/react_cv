@@ -7,6 +7,7 @@ import {useDencrypt} from "use-dencrypt-effect";
 import Topbar from '../../components/Topbar/Topbar';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import SnakeGame from '../../components/SnakeGame/SnakeGame';
 import './Home.css';
 
 
@@ -78,6 +79,9 @@ function Home() {
                     </svg>
                 </div>
 
+            </div>
+            <div className="snake-game-section">
+                <SnakeGame />
             </div>
         </>
     )
